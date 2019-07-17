@@ -1,0 +1,37 @@
+.catalog__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog__item {
+  border-bottom: 1px solid #ededed;
+
+  &:first-child {
+    border-top: 1px solid #ededed;
+  }
+}
+
+.catalog__title {
+  font-family: $oswald;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $text-black;
+}
+
+.catalog__field {
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-dark-grey;
+}
+
+.catalog__value {
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-dark-grey;
+  text-align: right;
+}

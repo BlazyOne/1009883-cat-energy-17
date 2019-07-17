@@ -1,0 +1,46 @@
+.example {
+  background-color: #f2f2f2;
+}
+
+.example__details {
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-dark-grey;
+}
+
+.example__value {
+  font-family: $oswald;
+  font-size: 24px;
+  line-height: 24px;
+  color: $text-black;
+  text-transform: uppercase;
+
+  border: 1px solid #cdcdcd;
+}
+
+.example__field {
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 12px;
+  color: $text-dark-grey;
+}
+
+.example__expences {
+  font-family: $oswald;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-black;
+  text-transform: uppercase;
+}
+
+.example__button {
+  font-family: $oswald;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-black;
+  text-transform: uppercase;
+
+  background: none;
+  border: none;
+}

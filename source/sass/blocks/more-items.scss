@@ -1,5 +1,6 @@
 .more-items {
-  border-bottom: 1px solid #ededed;
+  @include mobile-margins;
+  padding-top: 80px;
 }
 
 .more-items__heading {
@@ -8,6 +9,8 @@
   line-height: 20px;
   font-weight: 400;
   color: $text-black;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .more-items__promo {
@@ -15,4 +18,36 @@
   font-size: 12px;
   line-height: 16px;
   color: $text-dark-grey;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .more-items {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding-top: 160px;
+  }
+
+  .more-items__heading {
+    width: 135px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+
+    font-size: 20px;
+    line-height: 20px
+  }
+
+  .more-items__promo {
+    width: 170px;
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .more-items__button {
+    margin-top: auto;
+  }
 }

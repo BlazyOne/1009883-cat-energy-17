@@ -1,66 +1,36 @@
+//normalize
+@import "normalize.scss";
+//fonts
 @import "fonts.scss";
+//variables
 @import "variables.scss";
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-html { box-sizing: border-box; }
-
-*, *::before, *::after { box-sizing: inherit; }
-
-body {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: $text-dark-grey;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
+//mixins
+@import "mixins.scss";
+//global styles
+@import "global.scss";
+//buttons
 @import "blocks/button.scss";
-
+//header
+@import "blocks/page-header.scss";
 @import "blocks/site-list.scss";
-
+//index main
 @import "blocks/intro.scss";
 @import "blocks/programs.scss";
 @import "blocks/advantages.scss";
 @import "blocks/section-heading.scss";
 @import "blocks/example.scss";
-
+//catalog main
 @import "blocks/page-heading.scss";
 @import "blocks/catalog.scss";
 @import "blocks/more-items.scss";
 @import "blocks/additional-items.scss";
 @import "blocks/gift.scss";
-
+//form main
 @import "blocks/program-form.scss";
-
+//footer
 @import "blocks/page-footer.scss";
 @import "blocks/contacts.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+//JavaScript
+@import "js.scss"

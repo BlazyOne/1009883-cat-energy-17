@@ -1,0 +1,21 @@
+@mixin mobile-centering {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+}
+
+@mixin mobile-margins {
+  display: block;
+  margin: 0 20px;
+}
+
+@mixin tablet-margins {
+  display: block;
+  margin: 0 30px;
+}
+
+@mixin desktop-centering {
+  display: block;
+  width: 1220px;
+  margin: 0 auto;
+}

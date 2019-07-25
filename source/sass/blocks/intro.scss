@@ -1,14 +1,18 @@
 .intro {
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat,
+  background: url("../img/index-background-mobile@1x.jpg") 50% 0 no-repeat,
     linear-gradient(#65a93c 305px, #ffffff 305px);
 }
 
 .intro__title {
+  margin: 0;
+  @include mobile-margins;
+
   font-family: $oswald;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: #ffffff;
+  text-align: center;
 }
 
 .intro__slogan {
@@ -16,5 +20,106 @@
   font-size: 14px;
   line-height: 14px;
   color: #ffffff;
+  text-align: center;
   text-transform: uppercase;
+}
+
+.intro__food-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.intro__button-program {
+  margin-bottom: 22px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    background: none;
+  }
+
+  .intro__title {
+    margin: 0 120px;
+    margin-bottom: 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: $text-black;
+    text-align: left;
+  }
+
+  .intro__slogan {
+    margin: 0 120px;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $text-black;
+    text-align: left;
+  }
+
+  .intro__food-image {
+    display: block;
+    width: 709px;
+    height: 609px;
+    margin: 0 auto;
+  }
+
+  .intro__button-program {
+    width: $button-size-m;
+    margin-top: -52px;
+    margin-bottom: 0;
+    margin-left: 120px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    transform: translateY(-529px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    position: relative;
+
+    @include desktop-centering;
+    min-height: 555px;
+  }
+
+  .intro__title {
+    width: 420px;
+    margin: 0;
+    margin-top: 89px;
+    margin-left: 80px;
+    margin-bottom: 33px;
+  }
+
+  .intro__slogan {
+    margin: 0;
+    margin-left: 80px;
+    margin-bottom: 53px;
+  }
+
+  .intro__food-image {
+    position: absolute;
+    top: 0;
+    left: 450px;
+
+    width: 552px;
+    height: 499px;
+  }
+
+  .intro__button-program{
+    margin: 0;
+    margin-left: 80px;
+
+    transform: translateY(0);
+  }
 }

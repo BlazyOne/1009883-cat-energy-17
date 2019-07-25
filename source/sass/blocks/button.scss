@@ -1,11 +1,12 @@
 .button {
-  display: inline-block;
+  @include mobile-margins;
   padding-top: 10px;
   padding-bottom: 10px;
 
   font-family: $oswald;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
 
   border: none;
@@ -41,12 +42,16 @@
       background-color: #ebebeb;
     }
   }
+}
 
-  &--program {
-    padding-top: 11px;
-    padding-bottom: 11px;
+@media (min-width: $tablet-width) {
+  .button {
+    margin: 0;
+  }
+}
 
-    font-size: 14px;
-    line-height: 18px;
+@media (min-width: $desktop-width) {
+  .button {
+    margin: 0;
   }
 }

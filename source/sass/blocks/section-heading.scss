@@ -5,3 +5,10 @@
   font-weight: 400;
   color: $text-black;
 }
+
+@media (min-width: $tablet-width) {
+  .section-heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

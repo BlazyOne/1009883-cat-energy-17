@@ -1,12 +1,66 @@
 .gift {
+  @include mobile-margins;
   min-height: 289px;
+  margin-top: 39px;
 
-  background: #65a93c url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+  background: #65a93c url("../img/gift-photo-mobile@1x.jpg") 50% 0 no-repeat;
 }
 
 .gift__description {
+  width: 165px;
+  margin: 0 auto;
+  padding-top: 188px;
+
   font-family: $arial;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .gift {
+    @include tablet-margins;
+    min-height: 200px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .gift__wrapper {
+    width: 50%;
+    margin-left: auto;
+  }
+
+  .gift__description {
+    margin: 0;
+    margin-left: 69px;
+    padding: 0;
+    padding-top: 75px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    align-self: flex-start;
+    width: 245px;
+    min-height: 289px;
+    margin: 0;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .gift__wrapper {
+    width: auto;
+  }
+
+  .gift__description {
+    margin: 0 auto;
+    padding-top: 188px;
+
+    text-align: center;
+  }
 }

@@ -18,6 +18,7 @@
 
 .example__wrapper-table {
   width: auto;
+
   @include mobile-margins;
 
   overflow: hidden;

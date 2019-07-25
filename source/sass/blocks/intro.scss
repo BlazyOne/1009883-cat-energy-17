@@ -5,6 +5,7 @@
 
 .intro__title {
   margin: 0;
+
   @include mobile-margins;
 
   font-family: $oswald;
@@ -116,7 +117,7 @@
     height: 499px;
   }
 
-  .intro__button-program{
+  .intro__button-program {
     margin: 0;
     margin-left: 80px;
 

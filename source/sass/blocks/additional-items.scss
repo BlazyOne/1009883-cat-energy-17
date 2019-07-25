@@ -12,6 +12,7 @@
 .additional-items__list {
   margin: 0;
   padding: 0;
+
   @include mobile-margins;
 
   list-style: none;

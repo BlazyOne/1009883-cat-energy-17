@@ -35,6 +35,12 @@
 .program-form__list-item {
   display: flex;
   align-items: baseline;
+
+  &:last-child {
+    .program-form__label {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .program-form__label {
@@ -46,14 +52,6 @@
   line-height: 18px;
   color: $text-black-lighten;
   text-transform: uppercase;
-}
-
-.program-form__list-item {
-  &:last-child {
-    .program-form__label {
-      margin-bottom: 0;
-    }
-  }
 }
 
 .program-form__input-text {
@@ -265,7 +263,7 @@
     }
 
     &--additional {
-      .program-form__list-item{
+      .program-form__list-item {
         width: 245px;
         margin-right: 80px;
 

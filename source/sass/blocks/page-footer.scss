@@ -6,7 +6,7 @@
   display: block;
   margin: 0 auto;
   padding-top: 39px;
-  padding-bottom: 31px;
+  padding-bottom: 33px;
 }
 
 .page-footer__social {
@@ -21,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 45px 0;
+    padding-top: 37px;
   }
 
   .page-footer__logo-image {
@@ -37,6 +38,6 @@
   .page-footer__wrapper {
     @include desktop-centering;
     display: flex;
-    padding: 61px 0;
+    padding: 41px 0;
   }
 }

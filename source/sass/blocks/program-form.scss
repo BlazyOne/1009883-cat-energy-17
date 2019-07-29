@@ -1,4 +1,7 @@
 .program-form__description {
+  @include mobile-margins;
+  width: 230px;
+
   font-family: $oswald;
   font-size: 14px;
   line-height: 18px;
@@ -12,7 +15,10 @@
 
   border: none;
 
-  &--underscore {
+  &--main-program {
+    padding-top: 21px;
+    padding-bottom: 23px;
+
     border-bottom: 1px solid #ededed;
   }
 }
@@ -21,10 +27,26 @@
   margin: 0;
   padding: 0;
 
+  @include mobile-margins;
+
   list-style: none;
 }
 
+.program-form__list-item {
+  display: flex;
+  align-items: baseline;
+
+  &:last-child {
+    .program-form__label {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .program-form__label {
+  flex-shrink: 0;
+  margin-bottom: 27px;
+
   font-family: $oswald;
   font-size: 16px;
   line-height: 18px;
@@ -33,6 +55,10 @@
 }
 
 .program-form__input-text {
+  flex-grow: 1;
+  min-width: 50px;
+  margin-top: 14px;
+  margin-left: 16px;
   padding: 13px 16px;
 
   font-family: $oswald;
@@ -40,7 +66,7 @@
   line-height: 18px;
   color: $text-dark-grey;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid rgba(#cdcdcd, 0.5);
 
   &::placeholder {
     font-family: $oswald;
@@ -51,8 +77,9 @@
   }
 
   &--textarea {
-    width: 280px;
+    width: 100%;
     height: 150px;
+    margin-left: 0;
 
     border: 1px solid #cdcdcd;
 
@@ -61,6 +88,11 @@
 }
 
 .program-form__title {
+  @include mobile-margins;
+  width: 200px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+
   font-family: $oswald;
   font-size: 24px;
   line-height: 24px;
@@ -68,9 +100,197 @@
   color: $text-black;
 }
 
+.program-form__wrapper-button {
+  @include mobile-margins;
+}
+
+.program-form__button-submit {
+  width: 100%;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 .program-form__info {
+  @include mobile-margins;
+  margin-bottom: 32px;
+
   font-family: $arial;
   font-size: 14px;
   line-height: 16px;
   color: $text-dark-grey;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .program-form__description {
+    @include tablet-margins-form;
+    width: 330px;
+    margin-top: 48px;
+    margin-bottom: 60px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-form__fieldset {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+  }
+
+  .program-form__list {
+    @include tablet-margins-form;
+
+    &--program {
+      margin-top: 72px;
+      padding: 35px;
+
+      border: 1px solid rgba(#cdcdcd, 0.5);
+    }
+
+    &--additional {
+      display: flex;
+      flex-wrap: wrap;
+
+      .program-form__list-item {
+        width: calc(50% - 30px);
+
+        &:nth-child(2n-1) {
+          margin-right: 60px;
+        }
+      }
+    }
+  }
+
+  .program-form__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-form__input-text {
+    padding: 15px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &--textarea {
+      height: 174px;
+    }
+  }
+
+  .program-form__title {
+    @include tablet-margins-form;
+    width: auto;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program-form__wrapper-button-info {
+    @include tablet-margins-form;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 72px;
+  }
+
+  .program-form__wrapper-button {
+    width: calc(50% - 30px);
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  .program-form__button-submit {
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-form {
+    @include desktop-centering;
+  }
+
+  .program-form__description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .program-form__wrapper-main-program {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .program-form__fieldset {
+    &--main-program {
+      width: 570px;
+
+      &:nth-child(2n-1) {
+        margin-right: 80px;
+      }
+    }
+  }
+
+  .program-form__list {
+    margin-left: 0;
+    margin-right: 0;
+
+    &--program {
+      margin-top: 14px;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+
+      .program-form__list-item {
+        width: calc(50% - 40px);
+
+        &:nth-child(2n-1) {
+          margin-right: 80px;
+        }
+      }
+    }
+
+    &--additional {
+      .program-form__list-item {
+        width: 245px;
+        margin-right: 80px;
+
+        &:nth-child(2n-1) {
+          margin-right: 80px;
+        }
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .program-form__title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .program-form__wrapper-button-info {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 82px;
+  }
+
+  .program-form__wrapper-button {
+    width: 568px;
+    margin-right: 80px;
+  }
 }

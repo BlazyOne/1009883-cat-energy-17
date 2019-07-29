@@ -1,14 +1,19 @@
 .example {
+  padding-bottom: 33px;
+
   background-color: #f2f2f2;
 }
 
 .example__heading {
   @include mobile-margins;
+  margin-bottom: 23px;
+  padding-top: 17px;
 }
 
 .example__details {
   @include mobile-margins;
   margin-right: 25px;
+  margin-bottom: 25px;
 
   font-family: $arial;
   font-size: 14px;
@@ -28,13 +33,14 @@
   width: calc(100% + 64px);
   margin-left: -32px;
   margin-right: -32px;
+  margin-bottom: 9px;
 
   border-spacing: 32px 0;
 }
 
 .example__value {
   min-width: 124px;
-  padding-top: 16px;
+  padding-top: 13px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 16px;
@@ -71,6 +77,7 @@
 
 .example__expences {
   @include mobile-margins;
+  margin-bottom: 34px;
 
   font-family: $oswald;
   font-size: 14px;
@@ -83,6 +90,7 @@
 .example__image {
   display: block;
   margin: 0 auto;
+  margin-bottom: 31px;
 }
 
 .example__slider-controls {
@@ -104,7 +112,7 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    padding-top: 51px;
+    padding-top: 43px;
     padding-bottom: 68px;
 
     background: linear-gradient(to top, #eaeaea 462px, transparent 462px);
@@ -112,7 +120,8 @@
 
   .example__heading {
     @include tablet-margins;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
+    padding: 0;
   }
 
   .example__details {
@@ -130,29 +139,30 @@
     justify-content: space-between;
     width: auto;
 
-    overflow: auto;
+    overflow: visible;
   }
 
   .example__wrapper-table {
     width: auto;
     margin: 0;
 
-    overflow: auto;
+    overflow: visible;
   }
 
   .example__table {
     margin-left: -42px;
     margin-right: -42px;
+    margin-bottom: 71px;
 
     border-spacing: 42px 0;
   }
 
   .example__value {
     min-width: 162px;
-    padding-top: 17px;
+    padding-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 18px;
+    padding-bottom: 17px;
 
     font-size: 30px;
     line-height: 37px;
@@ -189,6 +199,8 @@
   .example__image {
     width: 690px;
     height: 517px;
+
+    margin-bottom: 15px;
   }
 
   .example__button {
@@ -202,6 +214,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+
   .example__wrapper-all {
     @include desktop-centering;
     display: flex;
@@ -213,13 +230,14 @@
 
   .example__heading {
     margin: 0;
-    margin-bottom: 138px;
+    margin-top: 15px;
+    margin-bottom: 146px;
   }
 
   .example__details {
     width: 432px;
     margin: 0;
-    margin-bottom: 67px;
+    margin-bottom: 68px;
   }
 
   .example__wrapper-tablet {
@@ -229,7 +247,7 @@
 
   .example__table {
     width: auto;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   .example__field-text {
@@ -251,5 +269,6 @@
     width: 690px;
     height: 517px;
     margin-top: -45px;
+    margin-bottom: 38px;
   }
 }

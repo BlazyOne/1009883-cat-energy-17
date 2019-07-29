@@ -7,6 +7,8 @@
   margin: 0;
 
   @include mobile-margins;
+  margin-bottom: 26px;
+  padding-top: 26px;
 
   font-family: $oswald;
   font-size: 36px;
@@ -17,6 +19,8 @@
 }
 
 .intro__slogan {
+  margin-bottom: 28px;
+
   font-family: $oswald;
   font-size: 14px;
   line-height: 14px;
@@ -28,6 +32,7 @@
 .intro__food-image {
   display: block;
   margin: 0 auto;
+  margin-bottom: 3px;
 }
 
 .intro__button-program {
@@ -45,8 +50,8 @@
   }
 
   .intro__title {
-    margin: 0 120px;
-    margin-bottom: 30px;
+    margin: 0 118px;
+    margin-bottom: 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -55,7 +60,7 @@
   }
 
   .intro__slogan {
-    margin: 0 120px;
+    margin: 0 118px;
     margin-bottom: 20px;
 
     font-size: 20px;
@@ -75,9 +80,9 @@
     width: $button-size-m;
     margin-top: -52px;
     margin-bottom: 0;
-    margin-left: 120px;
-    padding-top: 17px;
-    padding-bottom: 15px;
+    margin-left: 118px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     font-size: 20px;
     line-height: 20px;
@@ -92,26 +97,27 @@
 
     @include desktop-centering;
     min-height: 555px;
+    margin-bottom: 25px;
   }
 
   .intro__title {
     width: 420px;
     margin: 0;
-    margin-top: 89px;
+    margin-top: 70px;
     margin-left: 80px;
-    margin-bottom: 33px;
+    margin-bottom: 43px;
   }
 
   .intro__slogan {
     margin: 0;
     margin-left: 80px;
-    margin-bottom: 53px;
+    margin-bottom: 51px;
   }
 
   .intro__food-image {
     position: absolute;
-    top: 0;
-    left: 450px;
+    top: -53px;
+    left: 470px;
 
     width: 552px;
     height: 499px;

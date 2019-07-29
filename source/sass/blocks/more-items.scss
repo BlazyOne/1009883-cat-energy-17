@@ -1,9 +1,12 @@
 .more-items {
   @include mobile-margins;
-  padding-top: 80px;
+  padding-top: 79px;
 }
 
 .more-items__heading {
+  margin: 0;
+  margin-bottom: 9px;
+
   font-family: $oswald;
   font-size: 16px;
   line-height: 20px;
@@ -14,6 +17,9 @@
 }
 
 .more-items__promo {
+  margin: 0;
+  margin-bottom: 21px;
+
   font-family: $arial;
   font-size: 12px;
   line-height: 16px;
@@ -27,7 +33,7 @@
     flex-direction: column;
     flex-grow: 1;
     margin: 0;
-    padding-top: 160px;
+    padding-top: 162px;
   }
 
   .more-items__heading {

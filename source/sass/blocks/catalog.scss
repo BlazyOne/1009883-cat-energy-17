@@ -68,6 +68,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog {
+    margin-bottom: 37px;
+  }
+
   .catalog__list {
     @include tablet-margins;
     display: flex;
@@ -76,6 +80,7 @@
 
   .catalog__item {
     width: calc(50% - 30px);
+    min-height: 431px;
     margin-top: 140px;
     padding-left: 38px;
     padding-right: 37px;
@@ -119,9 +124,9 @@
   }
 
   .catalog__title {
-    width: 127px;
+    width: 130px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 
     font-size: 20px;
     line-height: 20px;
@@ -129,11 +134,14 @@
   }
 
   .catalog__table {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
   }
 
   .catalog__field,
   .catalog__value {
+    padding-top: 9px;
+    padding-bottom: 6px;
+
     font-size: 16px;
     line-height: 16px;
 
@@ -142,6 +150,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .catalog {
+    margin-bottom: 47px;
+  }
+
   .catalog__list {
     @include desktop-centering;
     display: flex;

@@ -2,6 +2,12 @@
   @include mobile-margins;
   display: flex;
   justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
+
+.page-header__nav-toggle {
+  height: 19px;
 }
 
 @media (min-width: $tablet-width) {
@@ -10,8 +16,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 13px;
+    padding-bottom: 18px;
   }
 
   .page-header__wrapper {
@@ -34,7 +40,8 @@
     @include desktop-centering;
     display: flex;
     align-items: center;
-    padding-top: 53px;
+    padding-top: 41px;
+    padding-bottom: 0;
 
     &--index {
       &::after {

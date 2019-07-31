@@ -1,0 +1,23 @@
+@media (min-width: $desktop-width) {
+  .body {
+    &--index {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+
+        width: 50%;
+        height: 696px;
+
+        background: #64a83b url("../img/index-background-desktop@1x.jpg") 100% 0 no-repeat;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-size: 720px auto;
+        }
+      }
+    }
+  }
+}

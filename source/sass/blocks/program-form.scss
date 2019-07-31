@@ -30,6 +30,37 @@
   @include mobile-margins;
 
   list-style: none;
+
+  &--main {
+    padding-top: 13px;
+
+    .program-form__label {
+      margin: 0;
+    }
+  }
+
+  &--program {
+    padding-top: 5px;
+    padding-left: 46px;
+    padding-bottom: 2px;
+  }
+
+  &--contacts {
+    padding-top: 10px;
+
+    .program-form__input-text {
+      margin-left: 11px;
+    }
+  }
+
+  &--habits {
+    padding-top: 10px;
+  }
+
+  &--additional {
+    padding-top: 15px;
+    padding-left: 46px;
+  }
 }
 
 .program-form__list-item {
@@ -40,12 +71,16 @@
     .program-form__label {
       margin-bottom: 0;
     }
+
+    .program-form__input-text {
+      margin-bottom: 0;
+    }
   }
 }
 
 .program-form__label {
   flex-shrink: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   font-family: $oswald;
   font-size: 16px;
@@ -57,8 +92,9 @@
 .program-form__input-text {
   flex-grow: 1;
   min-width: 50px;
-  margin-top: 14px;
+  margin: 0;
   margin-left: 16px;
+  margin-bottom: 14px;
   padding: 13px 16px;
 
   font-family: $oswald;
@@ -80,6 +116,8 @@
     width: 100%;
     height: 150px;
     margin-left: 0;
+    padding-left: 13px;
+    padding-right: 13px;
 
     border: 1px solid #cdcdcd;
 
@@ -90,7 +128,7 @@
 .program-form__title {
   @include mobile-margins;
   width: 200px;
-  margin-top: 23px;
+  margin-top: 29px;
   margin-bottom: 23px;
 
   font-family: $oswald;
@@ -113,7 +151,7 @@
 
 .program-form__info {
   @include mobile-margins;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 
   font-family: $arial;
   font-size: 14px;
@@ -126,8 +164,8 @@
   .program-form__description {
     @include tablet-margins-form;
     width: 330px;
-    margin-top: 48px;
-    margin-bottom: 60px;
+    margin-top: 55px;
+    margin-bottom: 50px;
 
     font-size: 20px;
     line-height: 30px;
@@ -145,17 +183,37 @@
 
     &--program {
       margin-top: 72px;
-      padding: 35px;
+      padding-top: 32px;
+      padding-left: 86px;
+      padding-right: 30px;
+      padding-bottom: 33px;
 
       border: 1px solid rgba(#cdcdcd, 0.5);
+    }
+
+    &--contacts {
+      padding-top: 51px;
+
+      .program-form__input-text {
+        margin-left: 16px;
+      }
+    }
+
+    &--habits {
+      padding-top: 52px;
     }
 
     &--additional {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: -26px;
+      padding-top: 44px;
+      padding-left: 0;
 
       .program-form__list-item {
         width: calc(50% - 30px);
+        margin-bottom: 18px;
+        padding-left: 57px;
 
         &:nth-child(2n-1) {
           margin-right: 60px;
@@ -165,12 +223,15 @@
   }
 
   .program-form__label {
+    margin-bottom: 33px;
+
     font-size: 20px;
     line-height: 20px;
   }
 
   .program-form__input-text {
-    padding: 15px 20px;
+    margin-bottom: 19px;
+    padding: 11px 20px;
 
     font-size: 20px;
     line-height: 20px;
@@ -188,17 +249,25 @@
   .program-form__title {
     @include tablet-margins-form;
     width: auto;
+    margin-top: 76px;
 
     font-size: 36px;
     line-height: 36px;
+
+    &--habits {
+      margin-top: 65px;
+    }
+
+    &--additional {
+      margin-top: 65px;
+    }
   }
 
   .program-form__wrapper-button-info {
     @include tablet-margins-form;
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    margin-bottom: 72px;
+    margin-bottom: 53px;
   }
 
   .program-form__wrapper-button {
@@ -213,6 +282,14 @@
 
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .program-form__info {
+    margin-top: 57px;
+    margin-left: -5px;
+
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
@@ -247,6 +324,8 @@
 
     &--program {
       margin-top: 14px;
+      padding-top: 35px;
+      padding-bottom: 35px;
     }
 
     &--contacts {
@@ -263,6 +342,9 @@
     }
 
     &--additional {
+      margin-bottom: -20px;
+      padding-top: 42px;
+
       .program-form__list-item {
         width: 245px;
         margin-right: 80px;
@@ -279,18 +361,28 @@
   }
 
   .program-form__title {
+    margin-top: 69px;
     margin-left: 0;
     margin-right: 0;
+
+    &--habits {
+      margin-top: 48px;
+    }
   }
 
   .program-form__wrapper-button-info {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 82px;
+    margin-bottom: 62px;
   }
 
   .program-form__wrapper-button {
     width: 568px;
     margin-right: 80px;
+  }
+
+  .program-form__info {
+    margin-top: 57px;
+    margin-left: 2px;
   }
 }

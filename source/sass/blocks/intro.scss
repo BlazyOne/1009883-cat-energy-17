@@ -1,6 +1,12 @@
 .intro {
   background: url("../img/index-background-mobile@1x.jpg") 50% 0 no-repeat,
     linear-gradient(#65a93c 305px, #ffffff 305px);
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(#65a93c 305px, #ffffff 305px);
+    background-size: 320px auto;
+  }
 }
 
 .intro__title {
@@ -117,7 +123,7 @@
   .intro__food-image {
     position: absolute;
     top: -53px;
-    left: 470px;
+    left: 450px;
 
     width: 552px;
     height: 499px;

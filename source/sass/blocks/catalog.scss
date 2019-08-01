@@ -27,6 +27,12 @@
   width: 50%;
 }
 
+.catalog__image {
+  display: block;
+  width: 140px;
+  height: 144px;
+}
+
 .catalog__wrapper-info {
   width: 50%;
 }
@@ -35,7 +41,7 @@
   width: 74px;
   margin: 0;
   margin-top: 21px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   font-family: $oswald;
   font-size: 16px;
@@ -113,10 +119,16 @@
 
   .catalog__wrapper-image {
     align-items: flex-end;
-    width: 100%;
+    width: calc(100% + 75px);
     height: 208px;
     margin-top: -82px;
+    margin-left: -38px;
     margin-bottom: 39px;
+  }
+
+  .catalog__image {
+    width: 324px;
+    height: auto;
   }
 
   .catalog__wrapper-info {
@@ -170,5 +182,10 @@
     &:nth-child(4n) {
       margin-right: 0;
     }
+  }
+
+  .catalog__image {
+    width: 245px;
+    height: auto;
   }
 }

@@ -199,8 +199,9 @@
   .example__image {
     width: 690px;
     height: 517px;
-
     margin-bottom: 15px;
+
+    transform: translateX(5px);
   }
 
   .example__button {
@@ -216,7 +217,9 @@
 @media (min-width: $desktop-width) {
   .example {
     padding-top: 65px;
-    padding-bottom: 70px;
+    padding-bottom: 68px;
+
+    overflow: hidden;
   }
 
   .example__wrapper-all {
@@ -266,9 +269,13 @@
   }
 
   .example__image {
+    max-width: 690px;
     width: 690px;
     height: 517px;
-    margin-top: -45px;
-    margin-bottom: 38px;
+    margin-top: -40px;
+    margin-left: -40px;
+    margin-bottom: 35px;
+
+    transform: translateX(0);
   }
 }

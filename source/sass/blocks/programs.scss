@@ -10,12 +10,55 @@
 }
 
 .programs__item {
+  position: relative;
+
   margin-bottom: 20px;
   padding: 21px;
   padding-top: 29px;
   padding-bottom: 20px;
 
   background-color: #f2f2f2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+
+  &--slim {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 30px;
+
+      width: 35px;
+      height: 49px;
+
+      background: url("../img/icon-cat-slim.svg") no-repeat;
+    }
+  }
+
+  &--pro {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 13px;
+
+      width: 67px;
+      height: 28px;
+
+      background: url("../img/icon-cat-pro.svg") no-repeat;
+    }
+  }
 }
 
 .programs__title {
@@ -45,6 +88,8 @@
 }
 
 .programs__link {
+  position: relative;
+
   font-family: $oswald;
   font-size: 16px;
   line-height: 16px;
@@ -53,6 +98,18 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -34px;
+
+    width: 25px;
+    height: 12px;
+
+    background: url("../img/icon-right-arrow-long.svg");
   }
 }
 
@@ -68,8 +125,37 @@
     padding-right: 280px;
     padding-bottom: 58px;
 
+    &::before {
+      top: 92px;
+      right: 62px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim {
+      &::after {
+        top: 80px;
+        right: 92px;
+        left: auto;
+
+        width: 141px;
+        height: 194px;
+      }
+    }
+
     &--pro {
       padding-right: 313px;
+
+      &::after {
+        top: 135px;
+        right: 28px;
+        left: auto;
+
+        width: 268px;
+        height: 113px;
+      }
     }
   }
 
@@ -93,6 +179,11 @@
   .programs__link {
     font-size: 20px;
     line-height: 20px;
+
+    &::after {
+      top: 8px;
+      right: -46px;
+    }
   }
 }
 
@@ -113,6 +204,35 @@
 
     &:nth-child(2n-1) {
       margin-right: 80px;
+    }
+
+    &::before {
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: 41px;
+        left: 65px;
+        right: auto;
+
+        width: 71px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 69px;
+        left: 34px;
+
+        width: 134px;
+        height: 57px;
+      }
     }
   }
 

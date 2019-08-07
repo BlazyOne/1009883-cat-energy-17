@@ -130,16 +130,37 @@
 }
 
 .program-form__title {
-  @include mobile-margins;
-  width: 200px;
+  display: inline-block;
+  margin: 0;
   margin-top: 29px;
   margin-bottom: 23px;
+  padding-left: 20px;
+  padding-right: 22px;
 
   font-family: $oswald;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: $text-black;
+
+  background-color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 3px;
+    margin-top: 13px;
+
+    background-color: #68b738;
+  }
+
+  &--contacts {
+    max-width: 70%;
+  }
 }
 
 .program-form__icon-contacts {
@@ -265,12 +286,21 @@
   }
 
   .program-form__title {
-    @include tablet-margins-form;
+    display: inline-block;
     width: auto;
+    max-width: none;
     margin-top: 76px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      margin-top: 22px;
+    }
 
     &--habits {
       margin-top: 65px;
@@ -392,7 +422,7 @@
 
   .program-form__title {
     margin-top: 69px;
-    margin-left: 0;
+    margin-left: -40px;
     margin-right: 0;
 
     &--habits {

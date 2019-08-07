@@ -1,4 +1,6 @@
 .gift {
+  position: relative;
+
   @include mobile-margins;
   min-height: 289px;
   margin-top: 39px;
@@ -9,6 +11,19 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
     background-size: 280px auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+
+    width: 56px;
+    height: 61px;
+    margin-left: -28px;
+
+    background-image: url("../img/icon-gift.svg");
   }
 }
 
@@ -36,6 +51,10 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
       background-size: 708px auto;
+    }
+
+    &::before {
+      margin-left: -264px;
     }
   }
 
@@ -66,6 +85,10 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
       background-size: 245px auto;
+    }
+
+    &::before {
+      margin-left: -28px;
     }
   }
 

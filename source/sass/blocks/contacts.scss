@@ -1,4 +1,20 @@
 .contacts {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 170px;
+
+    width: 62px;
+    height: 53px;
+    margin-left: -31px;
+
+    background: url("../img/map-pin.png") no-repeat;
+    background-size: 62px auto;
+  }
+
   &--white {
     background-color: #ffffff;
   }
@@ -54,6 +70,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts {
+    &::before {
+      content: "";
+      bottom: 144px;
+
+      width: 124px;
+      height: 106px;
+      margin-left: -62px;
+
+      background-size: 124px auto;
+    }
+  }
+
   .contacts__wrapper {
     margin: 0 71px;
     padding-top: 47px;
@@ -96,6 +125,10 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.png");
       background-size: 1440px;
+    }
+
+    &::before {
+      margin-left: 278px;
     }
   }
 

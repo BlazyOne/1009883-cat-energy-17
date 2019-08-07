@@ -11,8 +11,29 @@
 }
 
 .social__link {
+  display: block;
   margin-left: 19px;
   margin-right: 19px;
+
+  .social__icon {
+    position: relative;
+    z-index: -1;
+
+    fill: #666666;
+  }
+
+  &:hover {
+    .social__icon {
+      fill: #68b738;
+    }
+  }
+
+  &:active {
+    .social__icon {
+      fill: #68b738;
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

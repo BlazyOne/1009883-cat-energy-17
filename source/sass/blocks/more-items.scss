@@ -1,6 +1,23 @@
 .more-items {
+  position: relative;
+
   @include mobile-margins;
   padding-top: 79px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    margin-left: -15px;
+
+    background: url("../img/icon-plus-mobile.svg") no-repeat;
+    opacity: 0.2;
+  }
 }
 
 .more-items__heading {
@@ -34,6 +51,16 @@
     flex-grow: 1;
     margin: 0;
     padding-top: 162px;
+
+    &::before {
+      top: 53px;
+
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+
+      background-image: url("../img/icon-plus.svg")
+    }
   }
 
   .more-items__heading {

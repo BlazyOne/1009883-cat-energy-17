@@ -91,6 +91,10 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 31px;
+
+  &--after {
+    display: none;
+  }
 }
 
 .example__slider-controls {
@@ -221,12 +225,37 @@
     text-align: right;
   }
 
-  .example__image {
-    width: 690px;
+  .example__wrapper-images {
+    display: flex;
+    justify-content: center;
+  }
+
+  .example__wrapper-image {
+    position: relative;
+
+    width: 338px;
+    flex-shrink: 0;
     height: 517px;
     margin-bottom: 15px;
 
-    transform: translateX(5px);
+    overflow: hidden;
+  }
+
+  .example__image {
+    max-width: none;
+    width: 690px;
+    height: 517px;
+
+    &--after {
+      position: absolute;
+      right: -14px;
+
+      display: block;
+    }
+  }
+
+  .example__slider-controls {
+    transform: none;
   }
 
   .example__button {
@@ -243,6 +272,49 @@
 
     &:active {
       border: none;
+    }
+  }
+
+  .example__slider-bar {
+    position: relative;
+
+    width: 428px;
+    height: 6px;
+    margin-left: 22px;
+    margin-right: 22px;
+    padding: 0;
+
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 2.5px;
+  }
+
+  .example__slider-toggle {
+    position: absolute;
+    left: 199px;
+    top: -16px;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0 rgba(#000000, 0.15);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      margin-left: -4px;
+
+      background-color: #68b738;
+      border-radius: 50%;
     }
   }
 }
@@ -301,14 +373,29 @@
     margin-left: 60px;
   }
 
+  .example__wrapper-images {
+    transform: translateX(19px);
+  }
+
+  .example__wrapper-image {
+    width: 362px;
+    margin-bottom: 35px;
+    margin-top: -40px;
+  }
+
   .example__image {
     max-width: 690px;
     width: 690px;
     height: 517px;
-    margin-top: -40px;
-    margin-left: -40px;
-    margin-bottom: 35px;
 
-    transform: translateX(0);
+    transform: none;
+
+    &--after {
+      right: 34px;
+    }
+  }
+
+  .example__slider-controls {
+    transform: translateX(18px);
   }
 }

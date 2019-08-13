@@ -96,10 +96,6 @@
   color: $text-black;
   text-transform: uppercase;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -109,7 +105,29 @@
     width: 25px;
     height: 12px;
 
-    background: url("../img/icon-right-arrow-long.svg");
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      right: -55px;
+
+      width: 34px;
+
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      right: -55px;
+
+      width: 34px;
+
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
   }
 }
 

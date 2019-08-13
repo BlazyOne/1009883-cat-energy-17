@@ -108,12 +108,33 @@
 
   border: 1px solid rgba(#cdcdcd, 0.5);
 
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    padding: 12px 15px;
+
+    border: 2px solid #444444;
+    outline: none;
+  }
+
+  &:invalid {
+    padding: 12px 15px;
+
+    border: 2px solid #ff8282;
+  }
+
   &::placeholder {
     font-family: $oswald;
     font-size: 16px;
     line-height: 18px;
     color: $text-dark-grey;
     text-transform: uppercase;
+  }
+
+  &::-ms-clear {
+    display: none;
   }
 
   &--textarea {
@@ -126,6 +147,54 @@
     border: 1px solid #cdcdcd;
 
     resize: none;
+  }
+}
+
+.program-form__radio + .program-form__label {
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -46px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+  }
+}
+
+.program-form__radio:hover + .program-form__label {
+  &::before {
+    border-color: #bababa;
+  }
+}
+
+.program-form__radio:checked + .program-form__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -37px;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+}
+
+.program-form__radio:focus + .program-form__label {
+  &::before {
+    outline: 5px auto -webkit-focus-ring-color;
   }
 }
 
@@ -166,6 +235,8 @@
 .program-form__icon-contacts {
   position: absolute;
 
+  fill: #222222;
+
   &--mail {
     right: 16px;
     top: 17px;
@@ -174,6 +245,60 @@
   &--phone {
     right: 13px;
     top: 13px;
+  }
+}
+
+.program-form__input-text:focus + .program-form__icon-contacts {
+  fill: #68b738;
+}
+
+.program-form__input-text:invalid + .program-form__icon-contacts {
+  fill: #ff8282;
+}
+
+.program-form__checkbox + .program-form__label {
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -46px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.program-form__checkbox:hover + .program-form__label {
+  &::before {
+    border-color: #bababa;
+  }
+}
+
+.program-form__checkbox:checked + .program-form__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -40px;
+
+    width: 21px;
+    height: 16px;
+
+    background: url("../img/icon-tick.svg") no-repeat;
+  }
+}
+
+.program-form__checkbox:focus + .program-form__label {
+  &::before {
+    outline: 5px auto -webkit-focus-ring-color;
   }
 }
 
@@ -190,6 +315,7 @@
 
 .program-form__info {
   @include mobile-margins;
+  display: block;
   margin-bottom: 30px;
 
   font-family: $arial;
@@ -275,6 +401,11 @@
     font-size: 20px;
     line-height: 20px;
 
+    &:focus,
+    &:invalid {
+      padding: 10px 19px;
+    }
+
     &::placeholder {
       font-size: 20px;
       line-height: 20px;
@@ -282,6 +413,26 @@
 
     &--textarea {
       height: 174px;
+    }
+  }
+
+  .program-form__radio + .program-form__label {
+    &::before {
+      top: -10px;
+      left: -59px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .program-form__radio:checked + .program-form__label {
+    &::after {
+      top: 1px;
+      left: -48px;
+
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -320,6 +471,23 @@
     &--phone {
       right: 17px;
       top: 18px;
+    }
+  }
+
+  .program-form__checkbox + .program-form__label {
+    &::before {
+      top: -10px;
+      left: -59px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .program-form__checkbox:checked + .program-form__label {
+    &::after {
+      top: 2px;
+      left: -48px;
     }
   }
 

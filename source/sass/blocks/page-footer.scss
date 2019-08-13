@@ -26,6 +26,16 @@
   padding-bottom: 32px;
 }
 
+.page-footer__logo-link[href] .page-footer__logo-image {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__social {
   border-top: 1px solid rgba(#000000, 0.1);
   border-bottom: 1px solid rgba(#000000, 0.1);

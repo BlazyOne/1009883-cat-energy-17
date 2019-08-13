@@ -211,6 +211,14 @@
     line-height: 20px;
 
     border-bottom: 1px dotted rgba($text-black, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid rgba($text-black, 0.4);
+    }
+
+    &:active {
+      border: none;
+    }
   }
 }
 

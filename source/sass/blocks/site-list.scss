@@ -18,11 +18,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  border-bottom: 1px solid #e6e6e6;
-
-  &:first-child {
-    border-top: 1px solid #e6e6e6;
-  }
+  border-top: 1px solid #e6e6e6;
 }
 
 .site-list__link {
@@ -56,16 +52,8 @@
 
     border: none;
 
-    &:first-child {
-      border: none;
-    }
-
     &--active {
       border-bottom: 2px solid #68b738;
-
-      &:first-child {
-        border-bottom: 2px solid #68b738;
-      }
     }
   }
 }
@@ -95,10 +83,6 @@
 
     &--active-white {
       border-bottom: 2px solid #ffffff;
-
-      &:first-child {
-        border-bottom: 2px solid #ffffff;
-      }
     }
   }
 }

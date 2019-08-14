@@ -83,6 +83,8 @@
   .catalog {
     @include tablet-margins;
     margin-bottom: 37px;
+
+    overflow: hidden;
   }
 
   .catalog__list {
